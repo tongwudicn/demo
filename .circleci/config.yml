@@ -26,10 +26,9 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
       - run: gradle test
 
-
-test:
-    docker:
-      - image: gradle:6.9.0-jdk11
-    steps:
-      - checkout
-      - run: echo "The is test"
+  test:
+      docker:
+        - image: gradle:6.9.0-jdk11
+      steps:
+        - checkout
+        - run: echo "The is test"
