@@ -33,7 +33,7 @@ jobs:
         - checkout
         - run: echo "The is test"
         
- workflows:
+workflows:
   build_and_test: # name of your workflow
     jobs:
       - build
