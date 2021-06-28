@@ -26,15 +26,11 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
       - run: gradle test
 
+jobs:
   test:
       docker:
         - image: gradle:6.9.0-jdk11
       steps:
-        - checkout
         - run: echo "The is test"
         
-workflows:
-  build_and_test: # name of your workflow
-    jobs:
-      - build
-      - test
+
